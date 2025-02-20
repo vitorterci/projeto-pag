@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Estudos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f8f8f8;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid #ccc;
+            position: relative;
+        }
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .login {
+            position: absolute;
+            right: 20px;
+        }
+        .search-bar {
+            margin: 20px;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 60%;
+            padding: 10px;
+        }
+        .section {
+            margin: 20px;
+        }
+        .materials-container {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+        }
+        .material {
+            width: 200px;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .material img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="menu">
+        <a href="#">Início</a>
+        <a href="#">Matérias</a>
+        <a href="#">Recursos</a>
+        <a href="#">Simulados</a>
+    </nav>
+    <div class="login">
+        <a href="#">Login</a> | <a href="#">Inscrever-se</a>
+    </div>
+</header>
+
+<div class="search-bar">
+    <input type="text" placeholder="Buscar materiais de estudo...">
+</div>
+
+<section class="section">
+    <h2>Recomendado para Você</h2>
+    <div class="materials-container">
+        <div class="material">
+            <img src="https://via.placeholder.com/200" alt="Matéria 1">
+            <h3>Matemática</h3>
+            <p>Principais fórmulas e conceitos.</p>
+        </div>
+        <div class="material">
+            <img src="https://via.placeholder.com/200" alt="Matéria 2">
+            <h3>História</h3>
+            <p>Resumo dos períodos históricos.</p>
+        </div>
+        <div class="material">
+            <img src="https://via.placeholder.com/200" alt="Matéria 3">
+            <h3>Física</h3>
+            <p>Leis do movimento e experimentos.</p>
+        </div>
+        <div class="material">
+            <img src="https://via.placeholder.com/200" alt="Matéria 4">
+            <h3>Redação</h3>
+            <p>Dicas para um texto nota 1000.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Materiais Populares</h2>
+    <div class="materials-container">
+        <div class="material">
+            <img src="https://via.placeholder.com/200" alt="Material 1">
+            <h3>Biologia</h3>
+            <p>Ecossistemas e cadeias alimentares.</p>
+        </div>
+        <div class="material">
+            <img src="https://via.placeholder.com/200" alt="Material 2">
+            <h3>Química</h3>
+            <p>Reações químicas e tabela periódica.</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
