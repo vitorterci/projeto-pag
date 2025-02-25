@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <style>
+        /* Estilo geral */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #E3F2FD, #FFFFFF); /* Fundo azul claro para branco */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(to right, #64B5F6, #1E88E5);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-bottom: 3px solid #BBDEFB;
+            position: relative;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+            padding: 10px;
+        }
+
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        .logout {
+            position: absolute;
+            right: 20px;
+        }
+
+        .logout a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Cartão do perfil */
+        .profile-card {
+            background: white;
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Avatar */
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: lightgray;
+            display: inline-block;
+        }
+
+        /* Nome e informações */
+        .profile-info {
+            margin-top: 15px;
+        }
+
+        .profile-info h2 {
+            font-size: 22px;
+            color: #1E88E5;
+            margin: 5px 0;
+        }
+
+        .profile-info p {
+            font-size: 14px;
+            color: #555;
+            margin: 3px 0;
+        }
+
+        /* Linha divisória */
+        .divider {
+            margin: 15px 0;
+            height: 1px;
+            background: #ddd;
+            width: 100%;
+        }
+
+        /* Link de termos de uso */
+        .terms {
+            font-size: 12px;
+            color: #1E88E5;
+            cursor: pointer;
+        }
+
+        /* Botões */
+        .buttons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .buttons button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .logout-btn {
+            background: #E53935;
+            color: white;
+        }
+
+        .logout-btn:hover {
+            background: #C62828;
+        }
+
+        .edit {
+            background: #1E88E5;
+            color: white;
+        }
+
+        .edit:hover {
+            background: #1565C0;
+        }
+
+        /* Informação adicional */
+        .additional-info {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #777;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .question-mark {
+            width: 20px;
+            height: 20px;
+            background: #ddd;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Seção de interesses */
+        .interests {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .interests h3 {
+            color: #1E88E5;
+            font-size: 16px;
+        }
+
+        .interest-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .interest-item {
+            background: #BBDEFB;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #1565C0;
+            transition: 0.3s;
+        }
+
+        .interest-item:hover {
+            background: #90CAF9;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="menu">
+        <a href="#">Início</a>
+        <a href="#">Matérias</a>
+        <a href="#">Recursos</a>
+        <a href="#">Simulados</a>
+        <a href="#">Sobre</a>
+    </nav>
+    <div class="logout">
+        <a href="#">Sair</a>
+    </div>
+</header>
+
+<div class="profile-card">
+    <div class="avatar"></div>
+    <div class="profile-info">
+        <h2>Alex</h2>
+        <p>Alex@escola</p>
+        <p>34 anos</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <p class="terms">TERMOS DE USO</p>
+
+    <div class="buttons">
+        <button class="logout-btn">Sair</button>
+        <button class="edit">Editar Perfil</button>
+    </div>
+
+    <div class="additional-info">
+        <span>Alex Weiss</span>
+        <div class="question-mark">?</div>
+    </div>
+
+    <div class="interests">
+        <h3>Áreas de Interesse</h3>
+        <div class="interest-list">
+            <div class="interest-item">Desenvolvimento Web</div>
+            <div class="interest-item">Ciência de Dados</div>
+            <div class="interest-item">Segurança da Informação</div>
+            <div class="interest-item">Inteligência Artificial</div>
+            <div class="interest-item">Redes de Computadores</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
