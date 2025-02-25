@@ -5,60 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma de Estudos</title>
     <style>
+        /* Estilos gerais */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #E3F2FD; /* Azul claro */
         }
+        
+        /* Cabeçalho */
         header {
-            background-color: #f8f8f8;
+            background: linear-gradient(to right, #64B5F6, #1E88E5); /* Tons de azul */
             padding: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-bottom: 2px solid #ccc;
+            border-bottom: 3px solid #BBDEFB;
             position: relative;
         }
+
         .menu {
             display: flex;
             gap: 20px;
         }
+
         .menu a {
             text-decoration: none;
-            color: black;
+            color: white;
             font-weight: bold;
+            transition: 0.3s;
+            padding: 10px;
         }
+
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
         .login {
             position: absolute;
             right: 20px;
         }
+
+        .login a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Barra de pesquisa */
         .search-bar {
             margin: 20px;
             text-align: center;
         }
+
         input[type="text"] {
             width: 60%;
             padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #64B5F6;
         }
+
+        /* Seções */
         .section {
             margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
+
+        h2 {
+            text-align: center;
+            color: #1E88E5;
+        }
+
+        /* Cards de matérias */
         .materials-container {
             display: flex;
+            flex-wrap: wrap;
             gap: 15px;
-            overflow-x: auto;
+            justify-content: center;
         }
+
         .material {
             width: 200px;
             text-align: center;
-            border: 1px solid #ddd;
-            padding: 10px;
-            background-color: #f9f9f9;
+            padding: 15px;
+            background: #BBDEFB;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
-        .material img {
-            width: 100%;
-            height: 120px;
-            object-fit: cover;
+
+        .material:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+            background: #90CAF9;
+        }
+
+        .material h3 {
+            margin: 0;
+            color: #1565C0;
+        }
+
+        /* Equipe */
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .team-member {
+            width: 250px;
+            text-align: center;
+            padding: 15px;
+            background: #BBDEFB;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* Descrição */
+        .description {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -70,6 +145,7 @@
         <a href="#">Matérias</a>
         <a href="#">Recursos</a>
         <a href="#">Simulados</a>
+        <a href="#sobre">Sobre</a>
     </nav>
     <div class="login">
         <a href="#">Login</a> | <a href="#">Inscrever-se</a>
@@ -81,45 +157,57 @@
 </div>
 
 <section class="section">
-    <h2>Recomendado para Você</h2>
+    <h2>Matérias Gerais</h2>
     <div class="materials-container">
-        <div class="material">
-            <img src="https://via.placeholder.com/200" alt="Matéria 1">
-            <h3>Matemática</h3>
-            <p>Principais fórmulas e conceitos.</p>
-        </div>
-        <div class="material">
-            <img src="https://via.placeholder.com/200" alt="Matéria 2">
-            <h3>História</h3>
-            <p>Resumo dos períodos históricos.</p>
-        </div>
-        <div class="material">
-            <img src="https://via.placeholder.com/200" alt="Matéria 3">
-            <h3>Física</h3>
-            <p>Leis do movimento e experimentos.</p>
-        </div>
-        <div class="material">
-            <img src="https://via.placeholder.com/200" alt="Matéria 4">
-            <h3>Redação</h3>
-            <p>Dicas para um texto nota 1000.</p>
-        </div>
+        <div class="material"><h3>Matemática</h3></div>
+        <div class="material"><h3>Português</h3></div>
+        <div class="material"><h3>História</h3></div>
+        <div class="material"><h3>Inglês</h3></div>
+        <div class="material"><h3>Artes</h3></div>
+        <div class="material"><h3>Geografia</h3></div>
+        <div class="material"><h3>Redação e Leitura</h3></div>
+        <div class="material"><h3>Práticas Experimentais</h3></div>
+        <div class="material"><h3>Educação Financeira</h3></div>
+        <div class="material"><h3>Ciências</h3></div>
+        <div class="material"><h3>Robótica</h3></div>
+        <div class="material"><h3>Pensamento Lógico</h3></div>
+        <div class="material"><h3>Ensino Religioso</h3></div>
+        <div class="material"><h3>Estudo Orientado</h3></div>
+        <div class="material"><h3>Educação Física</h3></div>
     </div>
 </section>
 
 <section class="section">
-    <h2>Materiais Populares</h2>
+    <h2>Tecnologia e Computação</h2>
     <div class="materials-container">
-        <div class="material">
-            <img src="https://via.placeholder.com/200" alt="Material 1">
-            <h3>Biologia</h3>
-            <p>Ecossistemas e cadeias alimentares.</p>
-        </div>
-        <div class="material">
-            <img src="https://via.placeholder.com/200" alt="Material 2">
-            <h3>Química</h3>
-            <p>Reações químicas e tabela periódica.</p>
-        </div>
+        <div class="material"><h3>Desenvolvimento de Sistemas</h3></div>
+        <div class="material"><h3>Análise e Projeto de Sistemas</h3></div>
+        <div class="material"><h3>Ciência da Computação</h3></div>
+        <div class="material"><h3>Programação Mobile</h3></div>
+        <div class="material"><h3>Front End</h3></div>
+        <div class="material"><h3>Banco de Dados</h3></div>
+        <div class="material"><h3>Back End</h3></div>
+        <div class="material"><h3>Computação Gráfica</h3></div>
+        <div class="material"><h3>Ciência de Dados</h3></div>
     </div>
+</section>
+
+<section class="section">
+    <h2>Marketing e Negócios</h2>
+    <div class="materials-container">
+        <div class="material"><h3>Marketing</h3></div>
+        <div class="material"><h3>Logística de Canais</h3></div>
+        <div class="material"><h3>Legislação Aplicada ao Marketing</h3></div>
+        <div class="material"><h3>Estratégias Comerciais</h3></div>
+        <div class="material"><h3>Marketing Digital</h3></div>
+        <div class="material"><h3>Análise de Dados Aplicada</h3></div>
+        <div class="material"><h3>Pesquisa de Mercado</h3></div>
+    </div>
+</section>
+
+<section class="sobre">
+    <h2>sobre</h2>
+  
 </section>
 
 </body>
